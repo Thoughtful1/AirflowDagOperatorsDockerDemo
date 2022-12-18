@@ -1,0 +1,17 @@
+version: "3.8"
+
+services: 
+  vault:
+    image: vault:latest
+    environment:
+      - VAULT_ADDR=http://127.0.0.1:8200
+      - VAULT_API_ADDR=http://127.0.0.1:8200
+      - VAULT_ADDRESS=http://127.0.0.1:8200
+      - VAULT_DEV_ROOT_TOKEN_ID=ZyrP7NtNw0hbLUqu7N3IlTdO
+    expose:
+      - 8200
+    ports:
+      - "127.0.0.1:8200:8200"
+    command: server -dev -log-level "trace"
+
+

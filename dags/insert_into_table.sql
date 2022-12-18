@@ -1,0 +1,1 @@
+INSERT INTO table_example (custom_id, user_name, timestamp) VALUES (%(int)s, %(str)s, %(date)s);
